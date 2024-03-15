@@ -10,10 +10,13 @@ public class Board {
     }
     public void printBoard() {
         String alphabet[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
+        System.out.print("   ");
         for (int i = 0; i < board.length; i++) {
             System.out.print(" " + alphabet[i] + "  ");
         }
-        for (int i = 0; i < board.length; i++) {
+        System.out.println();
+        for (int i = 0, num = 1; i < board.length; i++, num++) {
+            System.out.print(num + "  ");
             for (int j = 0; j < board[0].length; j++) {
                 System.out.print(" " + board[i][j] + " ");
                 if (j != board[0].length - 1) {
@@ -22,6 +25,7 @@ public class Board {
             }
             System.out.println();
             if (i != board.length - 1) {
+                System.out.print("   ");
                 for (int k = 0; k < board.length; k++) {
                     System.out.print("----");
                 }
