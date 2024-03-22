@@ -17,5 +17,17 @@ public class Connect4 {
         }
         Board board = new Board(boardLength);
         board.printBoard();
+        board.player1Choice();
+        board.printBoard();
+        board.player2Choice();
+        board.printBoard();
+        board.player1Choice();
+        board.printBoard();
+        board.player2Choice();
+        board.printBoard();
+        board.player1Choice();
+        board.printBoard();
+        board.player2Choice();
+        board.printBoard();
     }
 }
