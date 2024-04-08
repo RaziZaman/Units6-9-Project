@@ -26,9 +26,11 @@ public class Connect4 {
                 board.player1Choice();
                 if (!board.xCheck() && !board.oCheck() && !board.tieCheck()) {
                     board.printBoard(2);
-                    board.player2Choice();
-                } else {
-                    board.printBoard(0);
+                    if (board.xCheck() || board.oCheck() || board.tieCheck()) {
+                        board.printBoard(0);
+                    } else {
+                        board.player2Choice();
+                    }
                 }
             }
         }
@@ -38,7 +40,8 @@ public class Connect4 {
                 board.player1Choice();
                 if (!board.xCheck() && !board.oCheck() && !board.tieCheck()) {
                     board2.player2Choice();
-                } else {
+                }
+                if (board.xCheck() || board.oCheck() || board.tieCheck()) {
                     board.printBoard(0);
                 }
             }
